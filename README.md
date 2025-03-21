@@ -1,12 +1,73 @@
-# React + Vite
+# Random Cat Image Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a **random cat image gallery** built with React and Tailwind CSS. It fetches cat images from **The Cat API** and displays them in a grid layout. Users can:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Load random cat images
+- Filter images by breed
+- Load more images dynamically
+- View cat details by clicking on an image
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (with Vite for fast development)
+- **Tailwind CSS** (for styling)
+- **Axios** (for API requests)
+- **The Cat API** (for fetching images)
+
+## Features
+
+### ✅ Fetch & Display Random Cat Images
+
+- Uses **The Cat API** to fetch images and display them in a responsive gallery.
+
+### ✅ Breed Filtering
+
+- Dropdown menu to filter images by breed.
+
+### ✅ Load More Button
+
+- Initially loads **20 images**.
+- Clicking "Load More" fetches **20 more images** dynamically.
+
+### ✅ Cat Detail Page
+
+- Clicking an image opens a detailed view with additional information.
+
+## Setup & Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/vaibhav-chittora/Random-Cat-Images-Gallery.git
+
+   cd cat-gallery
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the root and add your API key:
+   ```env
+   VITE_CAT_API_KEY=your_api_key_here
+   ```
+4. Run the project:
+   ```bash
+   npm run dev
+   ```
+
+## API Usage
+
+- The project fetches images from:
+  ```
+  https://api.thecatapi.com/v1/images/search?limit=20&page=1&api_key=YOUR_API_KEY
+  ```
+- Authentication is done using an API key in the headers.
+
+## Future Improvements
+
+- Add pagination for better performance.
+- Improve UI with animations.
+- Implement user favorites.
